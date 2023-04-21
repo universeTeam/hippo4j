@@ -39,6 +39,16 @@ on:
       - '**/src/test/**'
       - '!*.md'
       - '!docs/**'
+  pull_request_target:
+    branches: [ develop ]
+    paths:
+      - '.github/workflows/ci.yml'
+      - '**/pom.xml'
+      - '**/src/main/**'
+      - '**/src/test/**'
+      - '!*.md'
+      - '!docs/**'
+    types: [ opened, edited, synchronize ]
   repository_dispatch:
     types: [rerun-ci]
 
